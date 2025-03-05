@@ -32,15 +32,10 @@ public class Biblioteca {
         this.libros = libros;
     }
 
-        // TODO: Testear este metodo.
-// Test: Comprobar si se ha agregado
-
     public boolean agregarLibro(Libro libro) {
         return libros.add(libro);
     }
 
-        // TODO: Testear este metodo.
-// Test: comprobar si se ha eliminado
 
     public boolean eliminarLibro(Libro libro) {
         return libros.remove(libro);
@@ -55,9 +50,6 @@ public class Biblioteca {
         return libros;
     }
 
-
-// TODO: buscar libro existente y comprobar que lo localiza.
-// TODO 02: buscar libro NO existente y comprobar que no lo localiza.
     /**
      * Nos devuelve el libro si coincide el título con algún título dentro de la lista.
      * @param titulo cadena de texto con el título del libro.
