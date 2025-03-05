@@ -64,13 +64,6 @@ public class Biblioteca {
         return null;
     }
 
-
-// No testearlo
-// Este metodo está obsoleto. Hay que documentarlo como tal.
-// Recuerda: las anotaciones @deprecated y @link a la nueva
-// versión mejorada encuentraLibrosPorAutor(...)
-// En esta ocasión, NO TESTEAREMOS este metodo
-
     /**
      *
      * @deprecated  Este métoodo ha quedado obsoleto
@@ -88,17 +81,10 @@ public class Biblioteca {
         return null;
     }
 
-
-// Este metodo sustituye al metodo anterior. Está disponible desde la
-// versión 2.0. Hay que documentarlo teniéndolo en cuenta.
-// TODO: Testear este metodo.
-
-// Test: Comprobar la lista de libros que devuelve para un autor No existente
-
     /**
      * Devuelve todos los libros de un autor determinado.
      * Se recomienda usar en lugar de {@link #encuentaLibroPorAutor(String)}
-     * @since V2.0
+     * @since version2.0.
      * @param autor cadena de texto con el nombre del autor.
      * @return lista con todos los libros del autor pasado como parámetro.
      */

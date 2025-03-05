@@ -53,6 +53,12 @@ class BibliotecaTest {
 
     }
 
+    /*Versión del métoodo encuantraLibrosPorAutor() para autor existente. Hacemos
+    * lo siguiente: generamos una nueva biblioteca, agregamos el libro creado anteriormente,
+    * comprobamos que la lista no es nula, comprobamos que el tamañó de lista es el esperado,
+    * y una vez hecho esto, comprobvamos mediante una condición booleana si la biblioteca que
+    * hemos creado contiene el objeto Libro que hemos añadido al principio. Al devolvernos true,
+    * el test se pasa con exito. */
     @Test
     void encuentraLibrosPorAutorExistente() {
         Biblioteca biblio = new Biblioteca();
@@ -60,5 +66,23 @@ class BibliotecaTest {
         assertNotNull(biblio.getLibros());
         assertEquals(1, biblio.getLibros().size());
         assertTrue(biblio.getLibros().contains(this.libro));
+    }
+
+    /*Versión del métoodo encuantraLibrosPorAutor() para autor NO existente.
+    * Hacemos lo siguiente:generamos un nuevo libro, generamos una nueva biblioteca, agregamos el libro
+    * creado al principio del testing (libro), no el creado ahora. Comprobamos que la lista no es nula,
+    * comprobamos que el tamaño de lista es el esperado,y una vez hecho esto, comprobamos mediante una
+    * condición booleana si la biblioteca que hemos creado contiene el objeto libro2 (recordemos que libro2
+    * es el objeto de la clase Libro que hemos creado para este test).
+    * Al devolvernos False en un assertFalse se pasa el test, ya que es la salida esperada, puesto que libro2
+    * no es el libro añadido a la biblioteca, sino libro.*/
+    @Test
+    void encuentraLibrosPorAutorNoExistente() {
+        Libro libro2 = new Libro("Marina", "Zafón", 2000);
+        Biblioteca biblio = new Biblioteca();
+        biblio.agregarLibro(this.libro);
+        assertNotNull(biblio.getLibros());
+        assertEquals(1, biblio.getLibros().size());
+        assertFalse(biblio.getLibros().contains(libro2));
     }
 }
