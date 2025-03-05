@@ -92,7 +92,7 @@ public class Biblioteca {
 // Este metodo sustituye al metodo anterior. Está disponible desde la
 // versión 2.0. Hay que documentarlo teniéndolo en cuenta.
 // TODO: Testear este metodo.
-// Test: Comprobar la lista de libros que devuelve para un autor existentes.
+
 // Test: Comprobar la lista de libros que devuelve para un autor No existente
 
     /**

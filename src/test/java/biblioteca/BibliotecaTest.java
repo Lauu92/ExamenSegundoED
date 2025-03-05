@@ -54,6 +54,11 @@ class BibliotecaTest {
     }
 
     @Test
-    void encuentraLibrosPorAutor() {
+    void encuentraLibrosPorAutorExistente() {
+        Biblioteca biblio = new Biblioteca();
+        biblio.agregarLibro(this.libro);
+        assertNotNull(biblio.getLibros());
+        assertEquals(1, biblio.getLibros().size());
+        assertTrue(biblio.getLibros().contains(this.libro));
     }
 }

@@ -29,7 +29,7 @@ public class Libro {
      * @param autor String con el nombre del autor.
      * @param anioPublicacion int con el año de publicación.
      */
-        // TODO: Testear este método
+
     public Libro(String titulo, String autor, int anioPublicacion) {
         this.titulo = titulo;
         this.autor = autor;
